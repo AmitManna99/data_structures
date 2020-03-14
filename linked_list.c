@@ -14,6 +14,7 @@ int main()
     head=create(head,1);
     head=create(head,8);
     head=create(head,3);
+    display(head);
 }
 node *create(node *head, int x)
 {
@@ -28,20 +29,19 @@ node *create(node *head, int x)
     {
         p=head;
         while(p->next!=NULL)
-        {
             p=p->next;
-            p->next=q;
-        }
-    return head;
+        p->next=q;
     }
+    return head;
 }
-/*void display(node *head)
+void display(node *head)
 {
     node *p;
     p=head;
-    while(p->next!=NULL)
+
+    while(p!=NULL)
     {
         printf("%d\t",p->data);
         p=p->next;
     }
-}*/
+}

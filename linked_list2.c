@@ -9,15 +9,16 @@ typedef struct node node;
 void display(node*);
 int main()
 {
-    node *head;
-    node *first=NULL;
-    node *second=NULL;
-    node *third=NULL;
+    node *head=NULL;
+    node *first;
+    node *second;
+    node *third;
     first=(node*)malloc(sizeof(node));
     second=(node*)malloc(sizeof(node));
     third=(node*)malloc(sizeof(node));
+    //head=first;
     first->data=1;
-    head->next=second;
+    first->next=second;
     second->data=2;
     second->next=third;
     third->data=3;
@@ -29,9 +30,9 @@ void display(node *head)
 {
     node* p;
     p=head;
-    while(p->next!=NULL)
+    while(p!=NULL)
     {
-        printf("%d",p->data);
+        printf(" %d ",p->data);
         p=p->next;
     }
 }
